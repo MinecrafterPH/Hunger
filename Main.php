@@ -1,5 +1,5 @@
 <?php
-class HungerMegga implements Plugin{
+class Hunger implements Plugin{
 private $api;
 public function __construct(ServerAPI $api, $server = false){
 $this->api = $api;
