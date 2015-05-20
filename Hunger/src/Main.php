@@ -7,12 +7,23 @@ use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 
 class Main extends PluginBase implements Listener {
+	public $count_down = 60; //secs
+	public $time_count = array();
+
   
 
 public function onEnable(){
-                  console("Hunger: Plugin Started! ");
+                  $this->getLogger()->info("Loaded all plugin configurations! :D");
                 }
- 
+  
+    
+     public function onDisable(){
+     	$this->getLogger()->info("plugin disabled");
+	
+    }
+    
+    
+    
     public function Hunger() {
         $players = $this->api->player->online();
         for($i=0;$i<count($players);$i++) {
