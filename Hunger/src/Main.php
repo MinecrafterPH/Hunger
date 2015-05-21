@@ -1,5 +1,5 @@
 <?php
-namespace Hunger/Main;
+namespace Hunger\Main;
 
 use pocketmine\player;
 use pocketmine\plugin/PluginBase;
