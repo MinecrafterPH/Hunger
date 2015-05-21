@@ -24,9 +24,9 @@ public function onEnable(){
     
     
     public function Hunger() {
-        $p = $this->getserver()->$p->online();
+        $p = $this->getServer()->$p->online();
         for($i=0;$i<count($p);$i++) {
-        $player = $this->api->player->get($p[$i]);
+        $player = $this->getServer()->$p->get($p[$i]);
         if ($p->entity->getHealth() != 20) {
 	   	$p->sendMessage(" You Are Getting Hungry! ");
         $p->entity->setHealth($p->entity->getHealth()-1, "Hunger"); 
