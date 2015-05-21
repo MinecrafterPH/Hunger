@@ -28,7 +28,7 @@ public function onEnable(){
         for($i=0;$i<count($p);$i++) {
         $player = $this->getServer()->$p->get($p[$i]);
         if ($p->getHealth() != 20) {
-	   	$p->sendMessage(" You Are Getting Hungry! ");
+	   	$p->sendMessage("[//TODO: ADD CONFIG FOR PERFIX(for here :P)] EAT SOME FOOD!!! ");
         $p->setHealth($p->getHealth()-1, "Hunger"); 
                                  
          }
