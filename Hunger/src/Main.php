@@ -27,9 +27,9 @@ public function onEnable(){
         $p = $this->getServer()->$p->online();
         for($i=0;$i<count($p);$i++) {
         $player = $this->getServer()->$p->get($p[$i]);
-        if ($p->entity->getHealth() != 20) {
+        if ($p->getHealth() != 20) {
 	   	$p->sendMessage(" You Are Getting Hungry! ");
-        $p->entity->setHealth($p->entity->getHealth()-1, "Hunger"); 
+        $p->setHealth($p->getHealth()-1, "Hunger"); 
                                  
          }
       }
