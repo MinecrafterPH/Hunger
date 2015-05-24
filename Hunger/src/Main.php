@@ -1,5 +1,6 @@
 <?php
 namespace Hunger\Main;
+// THIS WAS MADE BY SavionLegendZzz  ONT STEAL IT .-.
 
 use pocketmine\player;
 use pocketmine\plugin/PluginBase;
@@ -10,7 +11,7 @@ class Main extends PluginBase implements Listener {
 public $p;
 }
 
-  
+  /TODO:add time(schedule) for hunger time
 
 public function onEnable(){
                   $this->getLogger()->info("Loaded all plugin configurations! :D");
