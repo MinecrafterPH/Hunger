@@ -1,4 +1,4 @@
-Hunger Plugin For MCPE Servers
-TODO:
-Update To New API (PocketMine-MP_1.4)
-INFO: this is a old API Plugin (0.8.x servers and lower)
+Hunger
+Status: Work In Progress
+When Is Release?: I don’t know :P
+Can I Help: Yes You Can If You Know PHP!!
