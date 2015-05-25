@@ -8,8 +8,7 @@ use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 
 class Main extends PluginBase implements Listener {
-public $p;
-}
+const DEV = "SavionLegendZzz" 
 
   /TODO:add time(schedule) for hunger time
 
