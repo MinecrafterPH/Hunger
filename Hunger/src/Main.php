@@ -24,7 +24,8 @@ public function onEnable(){
     }
     
     
-    public function Hunger() {
+    public function hunger($event) {
+    	$p = $event->getEntity();
         $p = $this->getServer()->$p->online();
         for($i=0;$i<count($p);$i++) {
         $player = $this->getServer()->$p->get($p[$i]);
