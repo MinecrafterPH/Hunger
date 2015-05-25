@@ -15,7 +15,8 @@ class Main extends PluginBase implements Listener {
 public function onEnable(){
 	$this->getServer()->getPluginManager()->registerEvents($this);
 	$c = new Config($this->getDataFolder()."config.yml", Config::YAML, array
-            //(add stuff here);
+            //(add stuff here)
+        $this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this, "hunger"]), 1200);
                   $this->getLogger()->info("Loaded all plugin configurations! :D");
                 }
     
