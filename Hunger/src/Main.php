@@ -7,22 +7,20 @@ use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageEvent;
 
-class Main extends PluginBase implements Listener {
-}
+class Main extends PluginBase{
+
 
   //TODO: add time(schedule) for hunger time
 
 public function onEnable(){
 	$this->getServer()->getPluginManager()->registerEvents($this);
-	$c = new Config($this->getDataFolder()."config.yml", Config::YAML, array
-            //(add stuff here)
-        $this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this, "hunger"]), 1200);
-                  $this->getLogger()->info("Loaded all plugin configurations! :D");
+	
+$this->getLogger()->info("Loaded all plugin configurations! :D");
                 }
     
     
     public function onDisable(){
-    	$this->$c->save();
+   
      	$this->getLogger()->info("plugin disabled");
 	
     }
@@ -41,6 +39,5 @@ public function onEnable(){
                                  
          }
       }
-   }
  }
 }
