@@ -1,2 +1,5 @@
-name: Hunger_Dev1.0
+name: Hunger 
 author: SavionLegendZzz
+version: dev_1.0 
+main: Hunger\Main 
+api: [1.0.0]
