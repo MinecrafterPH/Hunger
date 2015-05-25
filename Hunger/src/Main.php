@@ -3,16 +3,17 @@ namespace Hunger\Main;
 // THIS WAS MADE BY SavionLegendZzz  ONT STEAL IT .-.
 
 use pocketmine\player;
-use pocketmine\plugin/PluginBase;
+use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 
 class Main extends PluginBase implements Listener {
 const DEV = "SavionLegendZzz" 
 
-  /TODO:add time(schedule) for hunger time
+  //TODO: add time(schedule) for hunger time
 
 public function onEnable(){
+	$this->getServer()->getPluginManager()->registerEvents($this);
                   $this->getLogger()->info("Loaded all plugin configurations! :D");
                 }
     
@@ -21,10 +22,11 @@ public function onEnable(){
      	$this->getLogger()->info("plugin disabled");
 	
     }
-    
-    
-    public function hunger($event) {
-    	$p = $event->getEntity();
+     public function onPlayerDeath(PlayerDeathEvent $event){
+          $p = $event->getEntity();
+            $this->$p->sendMeassage("u dead boy");
+            
+    public function hunger(){
         $p = $this->getServer()->$p->online();
         for($i=0;$i<count($p);$i++) {
         $player = $this->getServer()->$p->get($p[$i]);
