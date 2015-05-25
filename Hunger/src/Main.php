@@ -1,6 +1,5 @@
 <?php
 namespace Hunger\Main;
-// THIS WAS MADE BY SavionLegendZzz  ONT STEAL IT .-.
 
 use pocketmine\player;
 use pocketmine\plugin\PluginBase;
@@ -15,13 +14,14 @@ class Main extends PluginBase implements Listener {
 
 public function onEnable(){
 	$this->getServer()->getPluginManager()->registerEvents($this);
-	$this->prefs = new Config($this->getDataFolder()."prferences.yml", Config::YAML, array
+	$c = new Config($this->getDataFolder()."config.yml", Config::YAML, array
             //(add stuff here);
                   $this->getLogger()->info("Loaded all plugin configurations! :D");
                 }
     
     
     public function onDisable(){
+    	$this->$c->save();
      	$this->getLogger()->info("plugin disabled");
 	
     }
