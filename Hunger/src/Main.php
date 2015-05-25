@@ -5,10 +5,11 @@ namespace Hunger\Main;
 use pocketmine\player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerDeathEvent;
+use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageEvent;
 
 class Main extends PluginBase implements Listener {
-const DEV = "SavionLegendZzz" 
+}
 
   //TODO: add time(schedule) for hunger time
 
@@ -27,6 +28,7 @@ public function onEnable(){
      public function onPlayerDeath(PlayerDeathEvent $event){
           $p = $event->getEntity();
             $this->$p->sendMeassage("u dead boy");
+     }
             
     public function hunger(){
         $p = $this->getServer()->$p->online();
