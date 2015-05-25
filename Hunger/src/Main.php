@@ -14,6 +14,8 @@ const DEV = "SavionLegendZzz"
 
 public function onEnable(){
 	$this->getServer()->getPluginManager()->registerEvents($this);
+	$this->prefs = new Config($this->getDataFolder()."prferences.yml", Config::YAML, array
+            //(add stuff here);
                   $this->getLogger()->info("Loaded all plugin configurations! :D");
                 }
     
