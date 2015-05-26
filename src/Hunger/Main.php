@@ -34,7 +34,7 @@ class Main extends PluginBase{
      }
      public function onPlayerDeath(PlayerDeathEvent $event){
         $p = $event->getEntity();
-        $this->$p->sendMeassage("You died of hunger.");
+        $this->$p->sendMessage("You died of hunger.");
      }
      public function hunger(){
         $p = $this->getServer()->$p->online();
