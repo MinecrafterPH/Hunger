@@ -1,5 +1,5 @@
 <?php
-namespace Hunger\Main;
+namespace Hunger;
 
 use pocketmine\player;
 use pocketmine\plugin\PluginBase;
@@ -8,51 +8,22 @@ use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageEvent;
 
 class Main extends PluginBase{
-const CAUSE_ENTITY_ATTACK = 1;
-private $cause;
-   private $modifiers;
-   private $originals;
 
   //TODO: add time(schedule) for hunger time
 
 public function onEnable(){
-	$this->getServer()->getPluginManager()->registerEvents($this);
 	
-$this->getLogger()->info("Loaded all plugin configurations! :D");
+	
+$this->getLogger()->info("Hunger Enabled");
                 }
     
-   public function __construct(Entity $entity, $cause, $damage){
-            $this->entity = $entity;
-            $this->cause = $cause;
-            if(is_array($damage)){
-                $this->modifiers = $damage;
-            }else{
-                $this->modifiers = [
-                    self::CAUSE_ENTITY_ATTACK => $damage
-                ];
-            }
-     return $this->cause;
-        }
     
-        public function getOriginalDamage($type = self::CAUSE_ENTITY_ATTACK){
-            if(isset($this->originals[$type])){
-                return $this->originals[$type];
-            }
-    
-           return 0;
-       }
    
-       public function getDamage($type = self::CAUSE_ENTITY_ATTACK){
-           if(isset($this->modifiers[$type])){
-               return $this->modifiers[$type];
-           }
-   
-           return 0;
-       }
+      
      
     public function onDisable(){
    
-     	$this->getLogger()->info("plugin disabled");
+     	$this->getLogger()->info("Hunger Disabled");
 	
     }
      public function onPlayerDeath(PlayerDeathEvent $event){
@@ -60,9 +31,7 @@ $this->getLogger()->info("Loaded all plugin configurations! :D");
             $this->$p->sendMeassage("u dead boy");
      }
 	 
-     public function setDamage($damage, $type = self::CASUE_ENTITY_ATTACK){
-  $this->$p->getHealth()->setDamage(CASUE_ENTITY_ATTACK);
-	 }
+   
             
     public function hunger(){
         $p = $this->getServer()->$p->online();
