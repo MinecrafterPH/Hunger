@@ -43,7 +43,7 @@ class Main extends PluginBase{
         if ($p->getHealth() != 20) {
 	$p->sendMessage("[//TODO: ADD CONFIG FOR PERFIX(for here :P)] EAT SOME FOOD!!! ");
         $p->setHealth($p->getHealth()-1, "Hunger");
-      }
-    }
-  }
+     }
+   }
+ }
 }
