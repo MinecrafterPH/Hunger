@@ -27,7 +27,10 @@ class Main extends PluginBase{
   //TODO: add time(schedule) for hunger time
 
      public function onEnable(){
+     	$this->saveDefaultConfig();
+     	$this->reloadConfig();
         $this->getLogger()->info("Hunger has been enabled.");
+        $this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this, "time"]), 60);
      }
      public function onDisable(){
      	$this->getLogger()->info("Hunger has been disabled.");
@@ -36,12 +39,18 @@ class Main extends PluginBase{
         $p = $event->getEntity();
         $this->$p->sendMessage("You died of hunger.");
      }
+     public function time(){
+     //TODO	
+     }
      public function hunger(){
+     	$cfg = $this->getConfig();
+     	$prefix = $cfg->get("prefix");
+     	
         $p = $this->getServer()->$p->online();
         for($i=0;$i<count($p);$i++) {
         $player = $this->getServer()->$p->get($p[$i]);
         if ($p->getHealth() != 20) {
-	$p->sendMessage("[//TODO: ADD CONFIG FOR PERFIX(for here :P)] EAT SOME FOOD!!! ");
+	$p->sendMessage("$prefix You're getting hungry. You need to eat now!");
         $p->setHealth($p->getHealth()-1, "Hunger");
      }
    }
