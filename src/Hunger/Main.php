@@ -28,7 +28,7 @@ class Main extends PluginBase{
 
      public function onEnable(){
         $this->getLogger()->info(TextFormat::YELLOW."Hunger has been enabled.");
-        $this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this, "time"]), 60);
+        $this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this, "hunger"]), 60);
         $this->config = new Config($this->getDataFolder() . "time.yml", Config::YAML, array());
 	$this->time=(int)$this->config->get("time");
      }
