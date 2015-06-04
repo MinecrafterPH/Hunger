@@ -1,6 +1,6 @@
 name: Hunger 
 author: SavionLegendZzz
-version: dev_1.0 
+version: 1.1_BETA 
 main: Hunger\Main
 api: [1.0.0]
 website: https://github.com/SavionLegendZzz/Hunger
