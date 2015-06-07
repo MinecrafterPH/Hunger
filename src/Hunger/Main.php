@@ -29,9 +29,7 @@ use pocketmine\utils\Config;
 
 
 class Main extends PluginBase{
-
-  //TODO: add time(schedule) for hunger time
-
+	
      public function onEnable(){
         $this->getLogger()->info(TextFormat::YELLOW."Hunger has been enabled.");
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this, "hunger"]), 60);
